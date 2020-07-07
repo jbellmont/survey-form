@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DeliverGrub survey</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b4895fab6a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<main>
+
+<header>
+<h1 id="title"><i class="fas fa-hamburger"></i>DeliverGrub</h1>
+<h2 id="sub-title">Customer survey form</h2>
+<p id="description">Thank you for taking time to help DeliverGrub. <br>Your input
+  will help us improve our product.</p>
+</header>
+
+<form id="survey-form">
+
+  <div class="label-input-group">
+    <label id="name-label" for="name">Name</label><br>
+    <input type="text" id="name" placeholder="e.g. John Smith" required>
+  </div>  
+
+  <div class="label-input-group">
+    <label id="email-label">Email address</label><br>
+    <input type="email" id="email" placeholder="e.g. john.smith@email.com" required>
+  </div>
+
+  <div class="label-input-group">
+    <label id="radio-buttons-label">Diet</label><br>
+      <label class="radio-button-option">
+        <input type="radio" id="radio" name="selection" value="vegetarian">
+        Vegetarian
+      </label>
+
+      <label class="radio-button-option">
+        <input type="radio" id="radio" name="selection" value="vegan">
+        Vegan 
+      </label>
+
+      <label class="radio-button-option">
+        <input type="radio" id="radio" name="selection" value="no-diet">
+        Neither (I eat meat and/or fish) 
+      </label>
+  </div>
+
+  <div class="label-input-group">
+    <label id="number-label">How many takeaways do you order, per month?</label><br>
+    <input type="number" id="number" min="1" max="31" required placeholder="1"> 
+  </div>
+
+  <div class="label-input-group">
+    <label id="takeaway-method-label">How do you order your takeaway?</label><br>
+    <select id="dropdown" name="takeaway-method-dropdown" required>
+      <option disabled selected value="">Select an option</option>
+      <option value="phone">Call the restaurant</option>
+      <option value="website">Via the restaurant's website</option>
+      <option value="social media">Via social media</option>
+      <option value="app">Via a delivery app (e.g. Just Eat)</option>
+    </select>
+  </div>
+
+  <div class="label-input-group">
+    <label id="checkbox-label">What are your favourite takeaway cuisines?</label><br>
+    <label class="checkbox"><input type="checkbox" value="american">American</label>
+    <label class="checkbox"><input type="checkbox" value="chinese">Chinese</label>
+    <label class="checkbox"><input type="checkbox" value="indian">Indian</label>
+    <label class="checkbox"><input type="checkbox" value="italian">Italian</label>
+    <label class="checkbox"><input type="checkbox" value="malaysian">Malaysian</label>
+    <label class="checkbox"><input type="checkbox" value="middle-eastern">Middle-eastern</label>
+    <label class="checkbox"><input type="checkbox" value="thai">Thai</label>
+    <label class="checkbox"><input type="checkbox" value="vietnamese">Vietnamese</label><br>
+  </div>
+
+
+    <div class="label-input-group">
+      <label id="textbox-label">What is your main annoyance with takeaways?</label><br>
+      <textarea id="text-area" autocomplete="off">Enter your comment here</textarea>
+    </div>
+
+    <button type="submit" id="submit">Submit <i class="fas fa-arrow-right"></i></button> 
+    
+</form>
+
+</main>
+
+<footer>
+  &copy; DeliverGrub, inc.
+  <i class="fas fa-hamburger"></i>
+</footer>
+</body>
+
+</html>
