@@ -1,8 +1,13 @@
 /* General selectors */
 
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: 'Varela Round', sans-serif;
-  color: #404040;
+  --grey-color: #404040;
+  color: var(--grey-color);
   /* CSS background pattern - https://leaverou.github.io/css3patterns/#diagonal-stripes */
   background-color: rgb(236, 236, 236);
   background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(255,255,255,.5) 25px, rgba(255,255,255,.5) 50px);
@@ -13,14 +18,48 @@ body {
   border-width: 0;
 }
 
+/* DeliverGrub logo */
 h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
+  animation-name: logo-shine;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5rem;
   margin: 0;
+}
+
+@media (min-width: 700px){
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1000px){
+  h1 {
+    font-size: 4.75rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@keyframes logo-shine {
+  0% {color: var(--grey-color);}
+  50% {color: white;}
+  100% {color: var(--grey-color)}
+}
+
+.required {
+  color: lightcoral;
 }
 
 
@@ -33,8 +72,8 @@ header {
 }
 
 #description {
-  font-size: 1.1em;
-  line-height: 1.5em;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 
 
@@ -47,15 +86,37 @@ header {
   border-color: rgb(199, 199, 199);
   border-radius: 10px;
   box-shadow: 10px 10px 25px lightgrey;
-  width: 55%;
+  width: 80%;
   margin: auto;
   padding: 5%;
   margin-bottom: 100px;
 }
 
+@media (min-width: 700px) {
+  #survey-form {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1000px) {
+  #survey-form {
+    width: 55%;
+  }
+}
+
+
 .label-input-group {
   padding: 0% 0% 5% 0%;
+  font-size: 1.2rem;
 }
+
+@media (min-width: 700px) {
+  .label-input-group {
+    font-size: 1.4rem;
+  }
+}
+
+
 
 #name, #email, #number, #dropdown {
   font-family: 'Varela Round', sans-serif;
@@ -82,12 +143,18 @@ textarea {
 
 #submit {
   font-family: 'Varela Round', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3rem;
   color: white;
   background-color: rgb(35, 113, 231);
   border-radius: 5px;
-  width: 10em;
-  height: 3em;
+  width: 13rem;
+  height: 4rem;
+}
+
+@media (min-width: 700px) {
+  #submit {
+    font-size: 1.5rem; 
+  }
 }
 
 @keyframes hover-fade {
@@ -98,6 +165,10 @@ textarea {
 #submit:hover {
   animation: hover-fade 0.5s 1;
   animation-fill-mode: forwards;
+}
+
+#submit:active {
+  color: rgb(236, 236, 236);
 }
 
 i {

@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DeliverGrub survey</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/b4895fab6a.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeliverGrub survey</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b4895fab6a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+  
 <main>
 
 <header>
 <h1 id="title"><i class="fas fa-hamburger"></i>DeliverGrub</h1>
 <h2 id="sub-title">Customer survey form</h2>
-<p id="description">Thank you for taking time to help DeliverGrub. <br>Your input
-  will help us improve our product.</p>
+<p id="description">Thank you for taking time to help DeliverGrub. <br>
+  Your input will help us improve our product.
+</p>
 </header>
 
 <form id="survey-form">
 
   <div class="label-input-group">
-    <label id="name-label" for="name">Name</label><br>
-    <input type="text" id="name" placeholder="e.g. John Smith" required>
+    <label id="name-label" for="name">Name <span class="required">(required)</span></label><br>
+    <input type="text" id="name" name="name" placeholder="e.g. John Smith" required>
   </div>  
 
   <div class="label-input-group">
-    <label id="email-label">Email address</label><br>
-    <input type="email" id="email" placeholder="e.g. john.smith@email.com" required>
+    <label id="email-label" for="email">Email address <span class="required">(required)</span></label><br>
+    <input type="email" id="email" name="email" placeholder="e.g. john.smith@email.com" required>
   </div>
 
   <div class="label-input-group">
-    <label id="radio-buttons-label">Diet</label><br>
-      <label class="radio-button-option">
-        <input type="radio" id="radio" name="selection" value="vegetarian">
+    <label id="radio-buttons-label">Diet <span class="required">(required)</span></label><br>
+      <label class="radio-button-option" for="vegetarian">
+        <input type="radio" id="vegetarian" name="diet" value="vegetarian" required>
         Vegetarian
       </label>
 
-      <label class="radio-button-option">
-        <input type="radio" id="radio" name="selection" value="vegan">
+      <label class="radio-button-option" for="vegan">
+        <input type="radio" id="vegan" name="diet" value="vegan">
         Vegan 
       </label>
 
-      <label class="radio-button-option">
-        <input type="radio" id="radio" name="selection" value="no-diet">
+      <label class="radio-button-option" for="no-diet">
+        <input type="radio" id="no-diet" name="diet" value="no-diet">
         Neither (I eat meat and/or fish) 
       </label>
   </div>
 
   <div class="label-input-group">
-    <label id="number-label">How many takeaways do you order, per month?</label><br>
-    <input type="number" id="number" min="1" max="31" required placeholder="1"> 
+    <label id="number-label" for="number">How many takeaways do you order, per month?</label><br>
+    <input type="number" id="number" name="orders" min="1" max="31" placeholder="1"> 
   </div>
 
   <div class="label-input-group">
-    <label id="takeaway-method-label">How do you order your takeaway?</label><br>
-    <select id="dropdown" name="takeaway-method-dropdown" required>
+    <label id="takeaway-method-label" for="dropdown">How do you order your takeaway?</label><br>
+    <select id="dropdown" name="takeaway-method" required>
       <option disabled selected value="">Select an option</option>
       <option value="phone">Call the restaurant</option>
       <option value="website">Via the restaurant's website</option>
@@ -66,20 +69,20 @@
 
   <div class="label-input-group">
     <label id="checkbox-label">What are your favourite takeaway cuisines?</label><br>
-    <label class="checkbox"><input type="checkbox" value="american">American</label>
-    <label class="checkbox"><input type="checkbox" value="chinese">Chinese</label>
-    <label class="checkbox"><input type="checkbox" value="indian">Indian</label>
-    <label class="checkbox"><input type="checkbox" value="italian">Italian</label>
-    <label class="checkbox"><input type="checkbox" value="malaysian">Malaysian</label>
-    <label class="checkbox"><input type="checkbox" value="middle-eastern">Middle-eastern</label>
-    <label class="checkbox"><input type="checkbox" value="thai">Thai</label>
-    <label class="checkbox"><input type="checkbox" value="vietnamese">Vietnamese</label><br>
+    <label class="checkbox" for="american"><input type="checkbox" value="american" id="american" name="cuisine">American</label>
+    <label class="checkbox" for="chinese"><input type="checkbox" value="chinese" id="chinese" name="cuisine">Chinese</label>
+    <label class="checkbox" for="indian"><input type="checkbox" value="indian" id="indian" name="cuisine">Indian</label>
+    <label class="checkbox" for="italian"><input type="checkbox" value="italian" id="italian" name="cuisine">Italian</label>
+    <label class="checkbox" for="malaysian"><input type="checkbox" value="malaysian" id="malaysian" name="cuisine">Malaysian</label>
+    <label class="checkbox" for="middle-eastern"><input type="checkbox" value="middle-eastern" id="middle-eastern" name="cuisine">Middle-eastern</label>
+    <label class="checkbox" for="thai"><input type="checkbox" value="thai" id="thai" name="cuisine">Thai</label>
+    <label class="checkbox" for="vietnamese"><input type="checkbox" value="vietnamese" id="vietnamese" name="cuisine">Vietnamese</label><br>
   </div>
 
 
     <div class="label-input-group">
-      <label id="textbox-label">What is your main annoyance with takeaways?</label><br>
-      <textarea id="text-area" autocomplete="off">Enter your comment here</textarea>
+      <label id="textbox-label" for="text-area">What is your main annoyance with takeaways?</label><br>
+      <textarea id="text-area" autocomplete="off" name="annoyance">Enter your comment here</textarea>
     </div>
 
     <button type="submit" id="submit">Submit <i class="fas fa-arrow-right"></i></button> 
