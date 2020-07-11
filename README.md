@@ -2,9 +2,6 @@
 
 https://jbellmont.github.io/survey-form/
 
-![alt text](https://jbellmont.github.io/survey-form/survey-form-screengrab.png
- "Survey form screengrab")
-
 A responsive survey form for a fictional takeaway food delivery startup "DeliverGrub".
 
 This project was undertaken as part of the "FreeCodeCamp - Responsive Web Design" course.
